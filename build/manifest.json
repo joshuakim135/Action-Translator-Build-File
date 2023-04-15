@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name":"Action Translator",
+  "description": "Google Sheets Assistant that will automate or help you do the tasks you want",
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Open"
+  },
+  "background": {
+    "service_worker": "./background.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline' https://music.yandex.ru/;"
+  },
+  "permissions": ["scripting",
+                  "windows",
+                  "activeTab",
+                  "webRequest",
+                  "http://127.0.0.1:5000",
+                  "taps",
+                  "https://www.googleapis.com/*",
+                  "https://www.google.com/*",
+                  "identity",
+                  "https://spreadsheets.google.com/*",
+                  "storage",
+                  "http://*/*",
+                  "https://*/*",
+                  "chrome://favicon/",
+                  "tabs"
+  ],
+  "optional_permissions": [
+    "https://www.google.com/"
+  ]
+}
+
